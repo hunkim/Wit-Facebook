@@ -2,8 +2,8 @@
 Wit-Faebook Messenger Example 
 ## Basic Installation
  ```
-git clone git@github.com:wit-ai/node-wit.git
-cd node-wit
+git clone https://github.com/hunkim/Wit-Facebook.git
+cd Wit-Facebook
 npm install
  ```
 
