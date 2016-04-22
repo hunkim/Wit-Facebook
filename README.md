@@ -8,9 +8,6 @@ cd Wit-Facebook
 npm install
  ```
 
-
-
-
 ## Configuration 
 ### Wit Setting
 Go to https://wit.ai/home and create an app for you. See a demo at: https://wit.ai/sungkim/weather/stories.
@@ -43,8 +40,6 @@ Add email and select category:
 
 Add website (any website is OK):
 
-![image](https://cloud.githubusercontent.com/assets/901975/14749987/1a11c8a8-08f5-11e6-8230-78b1106721af.png)
-
 ### Facebook Mesanger Setting
 
 From https://developers.facebook.com/apps/, select the created app:
@@ -74,7 +69,7 @@ You need to set WIT_TOKEN and FB_PAGE_TOKEN. You can set your FB_VERIFY_TOKEN wh
 Set the WIT_TOKEN, FB_PAGE_TOKEN, and FB_VERIFY_TOKEN.
 ![image](https://cloud.githubusercontent.com/assets/901975/14750245/627a5d20-08f6-11e6-9672-f19b3719eb2b.png)
 
-Make sure it's sucess and view the app:
+Make sure it's OK and view the app:
 ![image](https://cloud.githubusercontent.com/assets/901975/14750332/d59fad46-08f6-11e6-9f24-16fff6b98898.png)
 
 You may see something like this from https://{yourspecificedname}.herokuapp.com/:
