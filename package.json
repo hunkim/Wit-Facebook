@@ -1,0 +1,28 @@
+{
+  "name": "secretbots",
+  "version": "1.0.0",
+  "description": "![Alt text](/demo/Demo.gif)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "bot": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "node-wit": "^3.2.2",
+    "node-uuid": "^1.4.7",
+    "request": "^2.72.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jw84/messenger-bot-tutorial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jw84/messenger-bot-tutorial/issues"
+  },
+  "homepage": "https://github.com/jw84/messenger-bot-tutorial#readme"
+}
