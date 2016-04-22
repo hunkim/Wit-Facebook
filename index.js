@@ -9,13 +9,9 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const request = require('request');
-
-// When not cloning the `node-wit` repo, replace the `require` like so:
-// const Wit = require('node-wit').Wit;
-//const Wit = require('../').Wit;
 const Wit = require('node-wit').Wit;
 
-// get Bot
+// get Bot, const, and Facebook API
 const bot = require('./bot.js');
 const Config = require('./const.js');
 const FB = require('./facebook.js');
@@ -25,22 +21,6 @@ const wit = new Wit(Config.WIT_TOKEN, bot.actions);
 
 // Webserver parameter
 const PORT = process.env.PORT || 8445;
-
-// See the Webhook reference
-// https://developers.facebook.com/docs/messenger-platform/webhook-reference
-const getFirstMessagingEntry = (body) => {
-  const val = body.object == 'page' &&
-    body.entry &&
-    Array.isArray(body.entry) &&
-    body.entry.length > 0 &&
-    body.entry[0] &&
-    body.entry[0].messaging &&
-    Array.isArray(body.entry[0].messaging) &&
-    body.entry[0].messaging.length > 0 &&
-    body.entry[0].messaging[0];
-
-  return val || null;
-};
 
 // Wit.ai bot specific code
 
@@ -61,11 +41,10 @@ const findOrCreateSession = (fbid) => {
   if (!sessionId) {
     // No session found for user fbid, let's create a new one
     sessionId = new Date().toISOString();
-    sessions[sessionId] = {fbid: fbid, context: {_fbid_: fbid}};
+    sessions[sessionId] = {fbid: fbid, context: {_fbid_: fbid}}; // set context, _fid_
   }
   return sessionId;
 };
-
 
 // Starting our webserver and putting it all together
 const app = express();
@@ -79,7 +58,7 @@ app.get('/', function (req, res) {
   res.send('"Only those who will risk going too far can possibly find out how far one can go." - T.S. Eliot');
 });
 
-// Webhook verify setup
+// Webhook verify setup using FB_VERIFY_TOKEN
 app.get('/webhook', (req, res) => {
   if (!Config.FB_VERIFY_TOKEN) {
     throw new Error('missing FB_VERIFY_TOKEN');
@@ -92,10 +71,10 @@ app.get('/webhook', (req, res) => {
   }
 });
  
-// Message handler
+// The main message handler
 app.post('/webhook', (req, res) => {
   // Parsing the Messenger API response
-  const messaging = getFirstMessagingEntry(req.body);
+  const messaging = FB.getFirstMessagingEntry(req.body);
   if (messaging && messaging.message) {
 
     // Yay! We got a new message!

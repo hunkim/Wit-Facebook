@@ -1,20 +1,20 @@
 {
   "name": "mention-bot",
-  "description": "Automatically mention potential reviewers on pull requests.",
-  "repository": "https://github.com/facebook/mention-bot",
+  "description": "Wit-Facebook Messanger Bot Demo.",
+  "repository": "https://github.com/hunkim/Wit-Facebook",
   "logo": "https://avatars0.githubusercontent.com/u/15710697",
-  "keywords": ["node", "express", "github", "pull requests"],
+  "keywords": ["node", "express", "github", "wit", "bot", "fcaebook"],
   "env": {
     "WIT_TOKEN": {
-      "description": "A Server Access Token from wit.ai (see your app settings).",
+      "description": "Server Access Token from wit.ai (see your wit app settings).",
       "required": true
     },
     "FB_PAGE_TOKEN": {
-      "description": "Facebook page token from https://developers.facebook.com/apps/",
+      "description": "Facebook Page Token from https://developers.facebook.com/apps/",
       "required": true
     },
     "FB_VERIFY_TOKEN": {
-      "description": "Facebook verfication token. You can make it up.",
+      "description": "Facebook Verfication Token. You can make it up.",
       "required": false
     }
   }

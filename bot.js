@@ -1,9 +1,7 @@
 'use strict';
 
-// Joke example
-// See https://wit.ai/patapizza/example-joke
-
-// When not cloning the `node-wit` repo, replace the `require` like so:
+// Weather Example
+// See https://wit.ai/sungkim/weather/stories and https://wit.ai/docs/quickstart
 const Wit = require('node-wit').Wit;
 const FB = require('./facebook.js');
 const Config = require('./const.js');
@@ -20,16 +18,20 @@ const firstEntityValue = (entities, entity) => {
   return typeof val === 'object' ? val.value : val;
 };
 
+// Bot actions
 const actions = {
   say(sessionId, context, message, cb) {
     console.log(message);
+
+    // Bot testing mode, run cb() and return
     if (require.main === module) {
       cb();
       return;
     }
 
     // Our bot has something to say!
-    // Let's retrieve the Facebook user whose session belongs to
+    // Let's retrieve the Facebook user whose session belongs to from context
+    // TODO: need to get Facebook user name
     const recipientId = context._fbid_;
     if (recipientId) {
       // Yay, we found our recipient!
@@ -57,17 +59,21 @@ const actions = {
     // Retrieve the location entity and store it into a context field
    const loc = firstEntityValue(entities, 'location');
    if (loc) {
-     context.loc = loc;
+     context.loc = loc; // store it in context
    }
+
    cb(context);
   },
+  
   error(sessionId, context, error) {
     console.log(error.message);
   },
-  ['fetch-weather'](sessionId, context, cb) {
+
+  // fetch-weather bot executes
+  ['fetch-weather'](sessionId, context, cb) { 
     // Here should go the api call, e.g.:
     // context.forecast = apiCall(context.loc)
-    context.forecast = 'sunny';
+    context.forecast = 'sunny'; 
     cb(context);
   },
 };

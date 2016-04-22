@@ -13,6 +13,7 @@ const fbReq = request.defaults({
   headers: {'Content-Type': 'application/json'},
 });
 
+
 const fbMessage = (recipientId, msg, cb) => {
   const opts = {
     form: {
@@ -32,7 +33,26 @@ const fbMessage = (recipientId, msg, cb) => {
   });
 };
 
+
+// See the Webhook reference
+// https://developers.facebook.com/docs/messenger-platform/webhook-reference
+const getFirstMessagingEntry = (body) => {
+  const val = body.object == 'page' &&
+    body.entry &&
+    Array.isArray(body.entry) &&
+    body.entry.length > 0 &&
+    body.entry[0] &&
+    body.entry[0].messaging &&
+    Array.isArray(body.entry[0].messaging) &&
+    body.entry[0].messaging.length > 0 &&
+    body.entry[0].messaging[0];
+
+  return val || null;
+};
+
+
 module.exports = {
+  getFirstMessagingEntry: getFirstMessagingEntry,
   fbMessage: fbMessage,
   fbReq: fbReq
 };

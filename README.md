@@ -12,7 +12,7 @@ npm install
 ## Configuration 
 ### Wit Setting
 
-Go to https://wit.ai/home and create a wit app for you. See a demo at: https://wit.ai/sungkim/weather/stories.
+Go to https://wit.ai/home and create a wit app for you. Read https://wit.ai/docs/quickstart and see a demo at: https://wit.ai/sungkim/weather/stories.
 Then, go to the setting in your wit app and get the token id. 
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757067/58f03050-0922-11e6-813d-831df8614303.png)
