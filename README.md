@@ -19,8 +19,9 @@ Test the bot.js with your WIT_TOKEN, and make sure the bot says correclty.
  $WIT_TOKEN=insert_token_here node bot 
  ```
 ### Facebook Setting
-1. First you need to make a Facebook Page, since the messanger is connected to your page.
-2. Create an app and page
+1. First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messanger is connected to your page.
+2. Add a new App at https://developers.facebook.com/apps/. Select the "Website" platform.
+
 3. https://developers.facebook.com/docs/messenger-platform/quickstart
 ### Launch Heruku 
 
