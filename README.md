@@ -71,8 +71,6 @@ Alternatively, click the button below:
 
 You need to set WIT_TOKEN and FB_PAGE_TOKEN. You can set your FB_VERIFY_TOKEN which is a token used to verify the server. The default value is "just_do_it".
 
-![image](https://cloud.githubusercontent.com/assets/901975/14750146/d8de82f8-08f5-11e6-8b65-57942f8074d3.png)
-
 Set the WIT_TOKEN, FB_PAGE_TOKEN, and FB_VERIFY_TOKEN.
 ![image](https://cloud.githubusercontent.com/assets/901975/14750245/627a5d20-08f6-11e6-9672-f19b3719eb2b.png)
 
@@ -100,25 +98,18 @@ Then, you will see green complete!
 
 You may need to select the page one more time:
 
+```bash
 curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
-
+```
 You may see: 
+```bash
 {"success":true}
+```
 
-Finally, go to the Facebook page, you created/selected and send a message there:
+Finally, go to the Facebook page, you created/selected and talk to your bot:
 ![image](https://cloud.githubusercontent.com/assets/901975/14750786/20ddf0a4-08f9-11e6-9c9c-719d1020e5d8.png)
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14751164/2a485e2a-08fb-11e6-9a98-fd79bb0773f7.png)
-
-
-
-
-
-
-
- 
-
-
 
 
 
