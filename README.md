@@ -75,7 +75,7 @@ Make sure it's OK and view the app:
 You may see something like this from https://{yourspecificedname}.herokuapp.com/:
 ""Only those who will risk going too far can possibly find out how far one can go." - T.S. Eliot"
 
-Final step is put this server name in the facebok app page. From https://developers.facebook.com/apps/, select your app and messenger. You will see Webhooks:
+Final step is put this server URL in the facebok app page. From https://developers.facebook.com/apps/, select your app and messenger. You will see Webhooks:
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750370/0d98de98-08f7-11e6-8c6b-85733dab4fb4.png)
 
@@ -110,17 +110,17 @@ Finally, go to the Facebook page, you created/selected and talk to your bot:
 
 ## Testing
 ### Bot testing
- ```
+ ```bash
  $WIT_TOKEN=insert_token_here node bot 
  ```
 
 ### Server testing
 First, run the server
-```
+```bash
  $WIT_TOKEN=insert_token_here node index 
  ```
  In other shell, fire this command:
- ```
+ ```bash
  $curl -X POST -H "Content-Type: application/json" -d @test/msg.json http://localhost:8445/webhook
 ```
  
