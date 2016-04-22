@@ -36,8 +36,6 @@ const PORT = process.env.PORT || 8445;
 // See the Webhook reference
 // https://developers.facebook.com/docs/messenger-platform/webhook-reference
 const getFirstMessagingEntry = (body) => {
-  console.log("msg body: " + body.object);
-
   const val = body.object == 'page' &&
     body.entry &&
     Array.isArray(body.entry) &&
@@ -83,10 +81,11 @@ const app = express();
 app.set('port', PORT);
 app.listen(app.get('port'));
 app.use(bodyParser.json());
+console.log("I'm wating for you @" + PORT);
 
 // index. Let's say something fun
 app.get('/', function (req, res) {
-  res.send('hello world i am a secret bot')
+  res.send('"Only those who will risk going too far can possibly find out how far one can go." - T.S. Eliot');
 });
 
 // Webhook setup
@@ -104,8 +103,6 @@ app.get('/webhook', (req, res) => {
  
 // Message handler
 app.post('/webhook', (req, res) => {
-  console.log(req);
-  
   // Parsing the Messenger API response
   const messaging = getFirstMessagingEntry(req.body);
   if (messaging && messaging.message) {

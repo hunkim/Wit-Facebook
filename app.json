@@ -10,8 +10,12 @@
       "required": true
     },
     "FB_PAGE_TOKEN": {
-      "description": "Facebook page token",
+      "description": "Facebook page token from https://developers.facebook.com/apps/",
       "required": true
-    }
+    },
+    "FB_VERIFY_TOKEN": {
+      "description": "Facebook verfication token. You can make it up.",
+      "required": false
+    },
   }
 }

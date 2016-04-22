@@ -54,26 +54,20 @@ const actions = {
     }
   },
   merge(sessionId, context, entities, message, cb) {
-    delete context.joke;
-    const topic = firstEntityValue(entities, 'topic');
-    if (topic) {
-      context.topic = topic;
-    }
-
-    const sentiment = firstEntityValue(entities, 'sentiment');
-    if (sentiment) {
-      context.ack = sentiment === 'positive' ? 'Glad you liked it.' : 'Hmm.';
-    } else {
-      delete context.ack;
-    }
-
-    cb(context);
+    // Retrieve the location entity and store it into a context field
+   const loc = firstEntityValue(entities, 'location');
+   if (loc) {
+     context.loc = loc;
+   }
+   cb(context);
   },
   error(sessionId, context, error) {
     console.log(error.message);
   },
-  ['answer_it'](sessionId, context, cb) {
-    context.answer = context.topic; // just return the topic for now
+  ['fetch-weather'](sessionId, context, cb) {
+    // Here should go the api call, e.g.:
+    // context.forecast = apiCall(context.loc)
+    context.forecast = 'sunny';
     cb(context);
   },
 };
