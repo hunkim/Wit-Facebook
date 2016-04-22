@@ -56,7 +56,7 @@ First you need to make a Facebook Page at https://www.facebook.com/pages/create/
 
 * Select the page you have created and get the Page Access Token:
 
-![image](https://cloud.githubusercontent.com/assets/901975/14750082/892b295a-08f5-11e6-925a-812c43da654d.png)
+![image](https://cloud.githubusercontent.com/assets/901975/14757285/78e65248-0924-11e6-9ffb-e6226a7d434f.png)
 
 ### Launch Server in Heruku 
 
@@ -100,7 +100,11 @@ git push heroku master
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750734/e59c1016-08f8-11e6-9333-fbb7c92dd342.png)
 
-* You may need to select the Facebook Page one more time and get the access token. You need to fire this to activate your messanger.
+* You may need to select the Facebook Page one more time and get the access token. 
+
+![image](https://cloud.githubusercontent.com/assets/901975/14757285/78e65248-0924-11e6-9ffb-e6226a7d434f.png)
+
+* You need to fire this command to activate your messanger.
 
 ```bash
 curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
