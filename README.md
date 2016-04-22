@@ -149,5 +149,11 @@ Waiting for futher messages.
  
 The USER_ID error is OK, but make sure the bot says, "I see it’s sunny in Hong Kong today!".
 
+
+## Credit
+I reused soruce code from:
+* https://github.com/wit-ai/node-wit
+* https://github.com/jw84/messenger-bot-tutorial
+
  
 
