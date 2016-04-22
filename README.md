@@ -11,8 +11,13 @@ npm install
 ### Wit Setting
 Go to https://wit.ai/home and create an app for you. See a demo at: https://wit.ai/sungkim/weather/stories.
 Then, go to the setting in your app and get the token id. 
-Test the bot.js with your WIT_TOKEN.
 
+![image](https://cloud.githubusercontent.com/assets/901975/14749703/a88113de-08f3-11e6-834d-6ea1f5b929ae.png)
+
+Test the bot.js with your WIT_TOKEN, and make sure the bot says correclty.
+ ```
+ $WIT_TOKEN=insert_token_here node bot 
+ ```
 ### Facebook Setting
 1. First you need to make a Facebook Page, since the messanger is connected to your page.
 2. Create an app and page
