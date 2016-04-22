@@ -22,7 +22,7 @@ Test the bot.js with your WIT_TOKEN, and make sure the bot is working.
  ```
 
 ### Facebook Page Creation
-First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messenger is connected to your facebook page.
+First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messenger bot will be connected to your facebook page.
 
 ### Facebook App Creation 
 
@@ -48,7 +48,7 @@ First you need to make a Facebook Page at https://www.facebook.com/pages/create/
 
 * From https://developers.facebook.com/apps/, select the created app:
 
-![image](https://cloud.githubusercontent.com/assets/901975/14750039/53efba6c-08f5-11e6-871d-66739fa38109.png)
+![image](https://cloud.githubusercontent.com/assets/901975/14757262/32399512-0924-11e6-924f-6b52d6303ecf.png)
 
 * Select Messenger and get started:
 
