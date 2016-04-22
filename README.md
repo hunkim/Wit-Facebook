@@ -1,9 +1,10 @@
 # Wit-Facebook
 Wit-Facebook Messenger Example 
 ## Initial Installation
-Do fork this repository and clone.
- ```
-git clone https://github.com/hunkim/Wit-Facebook.git
+Fork this repository and clone.
+
+```bash
+git clone https://github.com/{forked}/Wit-Facebook.git
 cd Wit-Facebook
 npm install
  ``` 
@@ -17,9 +18,25 @@ Then, go to the setting in your wit app and get the token id.
 ![image](https://cloud.githubusercontent.com/assets/901975/14757067/58f03050-0922-11e6-813d-831df8614303.png)
 
 Test the bot.js with your WIT_TOKEN, and make sure the bot is working.
- ```
+```bash
  $WIT_TOKEN=insert_token_here node bot 
  ```
+
+ You can type your text, and see bot's response.
+
+```bash
+ Bot testing mode.
+> What is the weather?                        # your msg
+Executing merge action
+Executing say with message: Where exactly?
+Where exactly?                                # bot
+> In Seoul?                                   # your msg
+Executing merge action
+Executing action: fetch-weather
+Executing say with message: I see it’s sunny in Seoul today!
+I see it’s sunny in Seoul today!              # bot
+>
+```
 
 ### Facebook Page Creation
 First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messenger bot will be connected to your facebook page.
@@ -71,9 +88,7 @@ git push heroku master
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* You need to set WIT_TOKEN and FB_PAGE_TOKEN. You can set your FB_VERIFY_TOKEN which is a token used to verify the server. The default value is "just_do_it".
-
-* Set the WIT_TOKEN, FB_PAGE_TOKEN, and FB_VERIFY_TOKEN.
+* You need to set WIT_TOKEN and FB_PAGE_TOKEN. You can set your FB_VERIFY_TOKEN which is a token used to verify the server. The default value is "just_do_it". Set the WIT_TOKEN, FB_PAGE_TOKEN, and FB_VERIFY_TOKEN config variables.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750245/627a5d20-08f6-11e6-9672-f19b3719eb2b.png)
 
@@ -159,7 +174,8 @@ I reused soruce code and configuration from:
 * https://github.com/jw84/messenger-bot-tutorial
 * https://developers.facebook.com/docs/messenger-platform/quickstart
 
-## 
+## Contribution 
+We welcome your comments and PRs!
 
  
 
