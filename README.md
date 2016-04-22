@@ -9,6 +9,24 @@ Wit-Faebook Messenger Example
 ### Wit Setting
 ### Facebook setting
 ### Launch Heruku 
+
+If you want to use a different account for the bot, change the message or extend it with more functionalities, we've tried to make it super easy:
+
+```bash
+git clone https://github.com/XXX.git
+cd xxx
+npm install
+npm start
+# Follow the instructions there
+```
+
+Alternatively, click the button below:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+If you would like the mention-bot to function on private repositories, set the `GITHUB_USER` and `GITHUB_PASSWORD` environment variables. You must disable two-factor authentication or you will receive a console log like this: `Login to ${USERNAME} failed`.
+
+
 ### Facebook Hook setting
 
 ## Testing
