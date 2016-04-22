@@ -6,13 +6,6 @@
 // * a Messenger Platform setup (https://developers.facebook.com/docs/messenger-platform/quickstart)
 // You need to `npm install` the following dependencies: body-parser, express, request.
 //
-// 1. npm install body-parser express request 
-// 2. Download and install ngrok from https://ngrok.com/download
-// 3. ./ngrok http 8445
-// 4. WIT_TOKEN=your_access_token FB_PAGE_ID=your_page_id FB_PAGE_TOKEN=your_page_token FB_VERIFY_TOKEN=verify_token node examples/messenger.js
-// 5. Subscribe your page to the Webhooks using verify_token and `https://<your_ngrok_io>/fb` as callback URL.
-// 6. Talk to your bot on Messenger!
-
 const bodyParser = require('body-parser');
 const express = require('express');
 const request = require('request');
@@ -44,10 +37,8 @@ const getFirstMessagingEntry = (body) => {
     body.entry[0].messaging &&
     Array.isArray(body.entry[0].messaging) &&
     body.entry[0].messaging.length > 0 &&
-    body.entry[0].messaging[0]
-  ;
+    body.entry[0].messaging[0];
 
-  console.log("msg entry: " + val)
   return val || null;
 };
 
@@ -88,7 +79,7 @@ app.get('/', function (req, res) {
   res.send('"Only those who will risk going too far can possibly find out how far one can go." - T.S. Eliot');
 });
 
-// Webhook setup
+// Webhook verify setup
 app.get('/webhook', (req, res) => {
   if (!Config.FB_VERIFY_TOKEN) {
     throw new Error('missing FB_VERIFY_TOKEN');

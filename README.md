@@ -134,6 +134,20 @@ First, run the server
  ```bash
  $curl -X POST -H "Content-Type: application/json" -d @test/msg.json http://localhost:8445/webhook
 ```
+
+You will see something like this:
+```
+I'm wating for you @8445
+
+Executing merge action
+Executing action: fetch-weather
+Executing say with message: I see it’s sunny in Hong Kong today!
+I see it’s sunny in Hong Kong today!
+Oops! An error occurred while forwarding the response to USER_ID : An active access token must be used to query information about the current user.
+Waiting for futher messages.
+```
  
+The USER_ID error is OK, but make sure the bot says, "I see it’s sunny in Hong Kong today!".
+
  
 
