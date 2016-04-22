@@ -16,6 +16,6 @@
     "FB_VERIFY_TOKEN": {
       "description": "Facebook verfication token. You can make it up.",
       "required": false
-    },
+    }
   }
 }
