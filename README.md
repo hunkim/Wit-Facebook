@@ -1,11 +1,15 @@
 # Wit-Facebook
 Wit-Faebook Messenger Example 
-## Basic Installation
+## Initial Installation
+Do fork this repostiory and clone.
  ```
 git clone https://github.com/hunkim/Wit-Facebook.git
 cd Wit-Facebook
 npm install
  ```
+
+
+
 
 ## Configuration 
 ### Wit Setting
@@ -17,30 +21,13 @@ Then, go to the setting in your app and get the token id.
 Test the bot.js with your WIT_TOKEN, and make sure the bot says correclty.
  ```
  $WIT_TOKEN=insert_token_here node bot 
+
  ```
-### Facebook Setting
-1. First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messanger is connected to your page.
-2. Add a new App at https://developers.facebook.com/apps/. Select the "Website" platform.
 
-3. https://developers.facebook.com/docs/messenger-platform/quickstart
-### Launch Heruku 
+### Facebook Page Creation
+First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messanger is connected to your page.
 
-Run heroku create and push to heroku:
-```bash
-heroku create
-git push heroku master
-```
-
-Alternatively, click the button below:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-You need to set WIT_TOKEN and FB_PAGE_TOKEN. You can set your FB_VERIFY_TOKEN which is a token used to verify the server. The default value is "just_do_it".
-
-### Facebook Hook setting
-
-
-![image](https://cloud.githubusercontent.com/assets/901975/14749703/a88113de-08f3-11e6-834d-6ea1f5b929ae.png)
+### Facebook App creation 
 
 Add a new app: 
 ![image](https://cloud.githubusercontent.com/assets/901975/14749884/91404432-08f4-11e6-9b75-05b0c1994a91.png)
@@ -58,6 +45,8 @@ Add website (any website is OK):
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14749987/1a11c8a8-08f5-11e6-8230-78b1106721af.png)
 
+### Facebook Mesanger Setting
+
 From https://developers.facebook.com/apps/, select the created app:
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750039/53efba6c-08f5-11e6-871d-66739fa38109.png)
@@ -68,7 +57,19 @@ Select Messenger and get statred:
 Select the page you have created and get the Page Acess Token:
 ![image](https://cloud.githubusercontent.com/assets/901975/14750082/892b295a-08f5-11e6-925a-812c43da654d.png)
 
-Click Deploy Button in our gitrepos README.md
+### Launch Heruku 
+
+Run heroku create and push to heroku:
+```bash
+heroku create
+git push heroku master
+```
+
+Alternatively, click the button below:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+You need to set WIT_TOKEN and FB_PAGE_TOKEN. You can set your FB_VERIFY_TOKEN which is a token used to verify the server. The default value is "just_do_it".
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750146/d8de82f8-08f5-11e6-8b65-57942f8074d3.png)
 
