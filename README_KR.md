@@ -123,7 +123,7 @@ git push heroku master
 ```bash
 curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
 ```
-* You may see:
+* Success 신호를 받으면 정상입니다.
 ```bash
 {"success":true}
 ```
