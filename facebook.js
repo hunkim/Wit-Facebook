@@ -9,8 +9,12 @@ const fbReq = request.defaults({
   uri: 'https://graph.facebook.com/me/messages',
   method: 'POST',
   json: true,
-  qs: { access_token: Config.FB_PAGE_TOKEN },
-  headers: {'Content-Type': 'application/json'},
+  qs: {
+    access_token: Config.FB_PAGE_TOKEN
+  },
+  headers: {
+    'Content-Type': 'application/json'
+  },
 });
 
 
@@ -25,7 +29,7 @@ const fbMessage = (recipientId, msg, cb) => {
       },
     },
   };
-  
+
   fbReq(opts, (err, resp, data) => {
     if (cb) {
       cb(err || data.error && data.error.message, data);

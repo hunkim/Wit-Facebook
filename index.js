@@ -39,7 +39,12 @@ const findOrCreateSession = (fbid) => {
   if (!sessionId) {
     // No session found for user fbid, let's create a new one
     sessionId = new Date().toISOString();
-    sessions[sessionId] = {fbid: fbid, context: {_fbid_: fbid}}; // set context, _fid_
+    sessions[sessionId] = {
+      fbid: fbid,
+      context: {
+        _fbid_: fbid
+      }
+    }; // set context, _fid_
   }
   return sessionId;
 };
@@ -52,7 +57,7 @@ app.use(bodyParser.json());
 console.log("I'm wating for you @" + PORT);
 
 // index. Let's say something fun
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
   res.send('"Only those who will risk going too far can possibly find out how far one can go." - T.S. Eliot');
 });
 
@@ -68,7 +73,7 @@ app.get('/webhook', (req, res) => {
     res.sendStatus(400);
   }
 });
- 
+
 // The main message handler
 app.post('/webhook', (req, res) => {
   // Parsing the Messenger API response
@@ -129,4 +134,3 @@ app.post('/webhook', (req, res) => {
   }
   res.sendStatus(200);
 });
-
