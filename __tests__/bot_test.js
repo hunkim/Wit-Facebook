@@ -11,5 +11,4 @@ describe('Bot tests', () => {
     const client = bot.getWit(); // Just testing the creation  
     expect(client).not.toBeNull();  	
   });
-  	
 });
