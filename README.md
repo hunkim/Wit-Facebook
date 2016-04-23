@@ -1,4 +1,7 @@
 # Wit-Facebook
+[![Build Status](https://travis-ci.org/hunkim/Wit-Facebook.svg?branch=master)](https://travis-ci.org/hunkim/Wit-Facebook)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/7442b6c4eb6b48a890d751c0da5a3b6d)](https://www.codacy.com/app/hunkim/Wit-Facebook)
+
 Wit-Facebook Messenger Example
 ## Initial Installation
 Fork this repository and clone.
@@ -129,6 +132,12 @@ curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<P
 ![image](https://cloud.githubusercontent.com/assets/901975/14751164/2a485e2a-08fb-11e6-9a98-fd79bb0773f7.png)
 
 ## Testing
+
+### Jest
+ ```bash
+ npm test
+ ```
+
 ### Bot testing
  ```bash
  $WIT_TOKEN=insert_token_here node bot

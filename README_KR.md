@@ -1,4 +1,7 @@
 # Wit-Facebook
+[![Build Status](https://travis-ci.org/hunkim/Wit-Facebook.svg?branch=master)](https://travis-ci.org/hunkim/Wit-Facebook)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/7442b6c4eb6b48a890d751c0da5a3b6d)](https://www.codacy.com/app/hunkim/Wit-Facebook)
+
 Wit 봇 엔진과 Facebook 메신저 연동 한번에 해보기
 
 ## 기본 설치
@@ -132,6 +135,11 @@ curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<P
 ![image](https://cloud.githubusercontent.com/assets/901975/14751164/2a485e2a-08fb-11e6-9a98-fd79bb0773f7.png)
 
 ## Testing
+### Jest (유닛 테스팅)
+ ```bash
+ npm test
+ ```
+
 ### 개별 봇 테스팅
 아래 명령으로 봇의 기능을 테스트 할수 있습니다.
  ```bash
