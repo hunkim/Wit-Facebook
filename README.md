@@ -141,7 +141,7 @@ First, run the server
  ```
  In other shell, fire this command:
  ```bash
- $curl -X POST -H "Content-Type: application/json" -d @test/msg.json http://localhost:8445/webhook
+ $curl -X POST -H "Content-Type: application/json" -d @__tests__/msg.json http://localhost:8445/webhook
 ```
 
 You will see something like this:

@@ -146,7 +146,7 @@ curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<P
  ```
 그런다음 다른 shell이나 창에서 아래 명령으로 가상 메시지를 보내 봅니다.
  ```bash
- $curl -X POST -H "Content-Type: application/json" -d @test/msg.json http://localhost:8445/webhook
+ $curl -X POST -H "Content-Type: application/json" -d @__tests__/msg.json http://localhost:8445/webhook
 ```
 
 서버가 다음과 같이 응답하면 정상입니다.
