@@ -8,8 +8,6 @@
 //
 const bodyParser = require('body-parser');
 const express = require('express');
-const request = require('request');
-const Wit = require('node-wit').Wit;
 
 // get Bot, const, and Facebook API
 const bot = require('./bot.js');
