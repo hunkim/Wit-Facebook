@@ -1,28 +1,29 @@
 # Wit-Facebook
-Wit-Facebook Messenger Example 
-## Initial Installation
-Fork this repository and clone.
+Wit 봇 엔진과 Facebook 메신저 연동 한번에 해보기 
 
+## 기본 설치
+먼저 포크 한다음 클론
 ```bash
 git clone https://github.com/{forked}/Wit-Facebook.git
 cd Wit-Facebook
 npm install
  ``` 
 
-## Configuration 
-### Wit Setting
+## 설정 
+### Wit 만들기 
 
-Go to https://wit.ai/home and create a wit app for you. Read https://wit.ai/docs/quickstart and see a demo at: https://wit.ai/sungkim/weather/stories.
-Then, go to the setting in your wit app and get the token id. 
+우선 https://wit.ai/home 로 가서 엡을 하나 만듭니다. 여기 https://wit.ai/docs/quickstart 를 보시고 실제 만들이전 날씨 엡 예제를 보세요. https://wit.ai/sungkim/weather/stories.
+
+만드신 엡의 설정페이지에 가셔서 중요한 토큰 아이디를 가져옵니다. 
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757067/58f03050-0922-11e6-813d-831df8614303.png)
 
-Test the bot.js with your WIT_TOKEN, and make sure the bot is working.
+이 토큰 아이디를 이용해서 코컬에서 bot.js를 이용해서 잘 되는지 테스트 해봅니다. 본인의 Wit스토리를 바꾸면 bot.js를 같이 바꾸어 준다음 데스트.
 ```bash
  $WIT_TOKEN=insert_token_here node bot 
  ```
 
- You can type your text, and see bot's response.
+ 봇에게 말을 걸면 답을 해줍니다.
 
 ```bash
  Bot testing mode.
@@ -38,16 +39,16 @@ I see it’s sunny in Seoul today!              # bot
 >
 ```
 
-### Facebook Page Creation
-First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messenger bot will be connected to your facebook page.
+### Facebook 페이지 만들기
+우선 https://www.facebook.com/pages/create/?ref_type=pages_browser 에서 페이지를 하나 만듭니다. 메신저 봇은 바로 이 페이지와 연결됩니다.
 
-### Facebook App Creation 
+### Facebook 엡 만들기 
 
-* Add a new app at https://developers.facebook.com/quickstarts/?platform=web. Name it and click  "Create New Facebook App ID":
+* https://developers.facebook.com/quickstarts/?platform=web 에 가서 이름을 지정하고 "Create New Facebook App ID"을 눌러줍니다.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14749905/b557bf80-08f4-11e6-8218-2dd8dc7d529c.png)
 
-* Add email, select category, an add web site. (Any URL is OK):
+* 이메일, 분류, 그리고 웹페이지 URL(아무 URL)을 넣어 줍니다.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14749960/ef969b94-08f4-11e6-9fa6-3294a47fcf4e.png)
 
