@@ -1,5 +1,5 @@
 # Wit-Facebook
-Wit-Facebook Messenger Example 
+Wit-Facebook Messenger Example
 ## Initial Installation
 Fork this repository and clone.
 
@@ -7,19 +7,19 @@ Fork this repository and clone.
 git clone https://github.com/{forked}/Wit-Facebook.git
 cd Wit-Facebook
 npm install
- ``` 
+ ```
 
-## Configuration 
+## Configuration
 ### Wit Setting
 
 Go to https://wit.ai/home and create a wit app for you. Read https://wit.ai/docs/quickstart and see a demo at: https://wit.ai/sungkim/weather/stories.
-Then, go to the setting in your wit app and get the token id. 
+Then, go to the setting in your wit app and get the token id.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757067/58f03050-0922-11e6-813d-831df8614303.png)
 
 Test the bot.js with your WIT_TOKEN, and make sure the bot is working.
 ```bash
- $WIT_TOKEN=insert_token_here node bot 
+ $WIT_TOKEN=insert_token_here node bot
  ```
 
  You can type your text, and see bot's response.
@@ -41,7 +41,7 @@ I see it’s sunny in Seoul today!              # bot
 ### Facebook Page Creation
 First you need to make a Facebook Page at https://www.facebook.com/pages/create/?ref_type=pages_browser, since the messenger bot will be connected to your facebook page.
 
-### Facebook App Creation 
+### Facebook App Creation
 
 * Add a new app at https://developers.facebook.com/quickstarts/?platform=web. Name it and click  "Create New Facebook App ID":
 
@@ -50,7 +50,6 @@ First you need to make a Facebook Page at https://www.facebook.com/pages/create/
 * Add email, select category, an add web site. (Any URL is OK):
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14749960/ef969b94-08f4-11e6-9fa6-3294a47fcf4e.png)
-
 
 ### Facebook Messenger Setting
 
@@ -66,7 +65,7 @@ First you need to make a Facebook Page at https://www.facebook.com/pages/create/
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757285/78e65248-0924-11e6-9ffb-e6226a7d434f.png)
 
-### Launch Server in Heruku 
+### Launch Server in Heruku
 
 * Run heroku create and push to heroku:
 
@@ -91,23 +90,25 @@ git push heroku master
 * If it is set correctly, you will see something like this from https://{yourspecificedname}.herokuapp.com/:
 "Only those who will risk going too far can possibly find out how far one can go." - T.S. Eliot"
 
+### Facebook Webhooks Setting
+
 * The final step is to put this server URL in the Facebook app setting. From https://developers.facebook.com/apps/, select your app and messenger. You will see Webhooks:
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750370/0d98de98-08f7-11e6-8c6b-85733dab4fb4.png)
 
-* Select "Setup Webhooks", and you will see callback URL and verify token. For the callback URL put your Hherokuapp URL + "/webhook". For example, my callback URL is https://fbwitbot.herokuapp.com/webhook. 
+* Select "Setup Webhooks", and you will see callback URL and verify token. For the callback URL put your Hherokuapp URL + "/webhook". For example, my callback URL is https://fbwitbot.herokuapp.com/webhook.
 
-* Type the Verify Token that you set in the Heruku app setting. If you haven't set, the default value is "just_do_it". 
+* Type the Verify Token that you set in the Heruku app setting. If you haven't set, the default value is "just_do_it".
 
 * Click all items in the Subscription Fields.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750713/c64e4ee0-08f8-11e6-8745-2ebc746ae367.png)
 
-* Then, you will see the green complete! 
+* Then, you will see the green complete!
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750734/e59c1016-08f8-11e6-9333-fbb7c92dd342.png)
 
-* You may need to select the Facebook Page one more time and get the access token. 
+* You may need to select the Facebook Page one more time and get the access token.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757285/78e65248-0924-11e6-9ffb-e6226a7d434f.png)
 
@@ -116,7 +117,7 @@ git push heroku master
 ```bash
 curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
 ```
-* You may see: 
+* You may see:
 ```bash
 {"success":true}
 ```
@@ -127,18 +128,16 @@ curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<P
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14751164/2a485e2a-08fb-11e6-9a98-fd79bb0773f7.png)
 
-
-
 ## Testing
 ### Bot testing
  ```bash
- $WIT_TOKEN=insert_token_here node bot 
+ $WIT_TOKEN=insert_token_here node bot
  ```
 
 ### Server testing
 First, run the server
 ```bash
- $WIT_TOKEN=insert_token_here node index 
+ $WIT_TOKEN=insert_token_here node index
  ```
  In other shell, fire this command:
  ```bash
@@ -156,9 +155,8 @@ I see it’s sunny in Hong Kong today!
 Oops! An error occurred while forwarding the response to USER_ID : An active access token must be used to query information about the current user.
 Waiting for futher messages.
 ```
- 
-The USER_ID error is OK, but make sure the bot says, "I see it’s sunny in Hong Kong today!".
 
+The USER_ID error is OK, but make sure the bot says, "I see it’s sunny in Hong Kong today!".
 
 ## Credit
 I reused soruce code and configuration from:
@@ -166,8 +164,5 @@ I reused soruce code and configuration from:
 * https://github.com/jw84/messenger-bot-tutorial
 * https://developers.facebook.com/docs/messenger-platform/quickstart
 
-## Contribution 
+## Contribution
 We welcome your comments and PRs!
-
- 
-
