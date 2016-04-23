@@ -71,6 +71,7 @@ First you need to make a Facebook Page at https://www.facebook.com/pages/create/
 * Run heroku create and push to heroku:
 
 ```bash
+cd Wit-Facebook
 heroku create
 git push heroku master
 ```

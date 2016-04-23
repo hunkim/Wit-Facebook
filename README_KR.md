@@ -53,38 +53,41 @@ I see it’s sunny in Seoul today!              # bot
 ![image](https://cloud.githubusercontent.com/assets/901975/14749960/ef969b94-08f4-11e6-9fa6-3294a47fcf4e.png)
 
 
-### Facebook Messenger Setting
+### Facebook 메신저 설정
 
-* From https://developers.facebook.com/apps/, select the created app:
+* https://developers.facebook.com/apps/에 가서 만들어 둔 엡을 선택합니다.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757262/32399512-0924-11e6-924f-6b52d6303ecf.png)
 
-* Select Messenger and get started:
+* 왼쪽 하단에 있는 메신저 메뉴를 클릭합니다.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750051/6733be3e-08f5-11e6-9da7-a35eb2720298.png)
 
-* Select the page you have created and get the Page Access Token:
+* 메신저를 어느 Facebook 페이지랑 연결 시킬 것인지 선택한 다음 Page Access Token을 가져옵니다.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757285/78e65248-0924-11e6-9ffb-e6226a7d434f.png)
 
-### Launch Server in Heruku 
+### 서버를 Heruku 에서 돌리기
+heroku.com는 본인의 프로그램을 5개 까지 무료로 deploy 해주므로 이 서비스를 이용, 우리 봇 서버를 돌립니다. 자세한 설명은 heroku.com.
 
-* Run heroku create and push to heroku:
+* 'heroku create' 명령을 실행한 다음 heroku로 푸쉬 합니다.
 
 ```bash
+cd Wit-Facebook
 heroku create
 git push heroku master
 ```
 
-* Alternatively, click the button below:
+* 더 쉬운 방법은 아래 Heroku버턴을 누르시면 쉽게 할수 있습니다.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* You need to set WIT_TOKEN and FB_PAGE_TOKEN. You can set your FB_VERIFY_TOKEN which is a token used to verify the server. The default value is "just_do_it". Set the WIT_TOKEN, FB_PAGE_TOKEN, and FB_VERIFY_TOKEN config variables.
+* 이전 설정에서 받아온 WIT_TOKEN, FB_PAGE_TOKEN 이 필요합니다. FB_VERIFY_TOKEN 은 일종의 비밀 번호로 여러분들이 원하시는 값으로 설정합니다.
+기본값은 "just_do_it" 로 되어 있습니다. 이 값들을 heroku 설정 변수 (config variables) 에 입력 합니다.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750245/627a5d20-08f6-11e6-9672-f19b3719eb2b.png)
 
-* Make sure "Deploy to Heroku" is green and click the "View" button:
+* 설정후 Deploy 한다음 "Deploy to Heroku" 이 초록으로 된것을 확인한 다음 "View" 버턴을 눌러 서버로 갑니다.
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14750332/d59fad46-08f6-11e6-9f24-16fff6b98898.png)
 
