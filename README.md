@@ -68,7 +68,7 @@ First you need to make a Facebook Page at https://www.facebook.com/pages/create/
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757285/78e65248-0924-11e6-9ffb-e6226a7d434f.png)
 
-### Launch Server in Heruku
+### Launch Server in Heroku
 
 * Run heroku create and push to heroku:
 
