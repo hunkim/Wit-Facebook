@@ -12,7 +12,7 @@
   "license": "MIT",
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": ["core-js/.*"]
+    "unmockedModulePathPatterns": ["core-js/.*", "sshpk/.*"]
   },
   "dependencies": {
     "body-parser": "^1.15.0",

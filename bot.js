@@ -79,12 +79,16 @@ const actions = {
 };
 
 
-exports.actions = actions;
+const getWit = () => {
+  return new Wit(Config.WIT_TOKEN, actions);
+}
+
+exports.getWit = getWit;
 
 // bot testing mode
 // http://stackoverflow.com/questions/6398196
 if (require.main === module) {
   console.log("Bot testing mode.");
-  const client = new Wit(Config.WIT_TOKEN, actions);
+  const client = getWit();
   client.interactive();
 }

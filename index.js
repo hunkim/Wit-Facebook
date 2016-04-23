@@ -17,7 +17,7 @@ const Config = require('./const.js');
 const FB = require('./facebook.js');
 
 // Setting up our bot
-const wit = new Wit(Config.WIT_TOKEN, bot.actions);
+const wit = bot.getWit();
 
 // Webserver parameter
 const PORT = process.env.PORT || 8445;
