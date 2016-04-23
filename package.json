@@ -24,7 +24,7 @@
     "babel-jest": "^6.0.1",
     "babel-polyfill": "^6.1.4",
     "bl": "^1.0.0",
-     "jest-cli": "^0.7.1"
+    "jest-cli": "^0.7.1"
   },
   "repository": {
     "type": "git",

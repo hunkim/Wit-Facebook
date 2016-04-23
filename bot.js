@@ -10,8 +10,7 @@ const firstEntityValue = (entities, entity) => {
   const val = entities && entities[entity] &&
     Array.isArray(entities[entity]) &&
     entities[entity].length > 0 &&
-    entities[entity][0].value
-  ;
+    entities[entity][0].value;
   if (!val) {
     return null;
   }
@@ -57,23 +56,23 @@ const actions = {
   },
   merge(sessionId, context, entities, message, cb) {
     // Retrieve the location entity and store it into a context field
-   const loc = firstEntityValue(entities, 'location');
-   if (loc) {
-     context.loc = loc; // store it in context
-   }
+    const loc = firstEntityValue(entities, 'location');
+    if (loc) {
+      context.loc = loc; // store it in context
+    }
 
-   cb(context);
+    cb(context);
   },
-  
+
   error(sessionId, context, error) {
     console.log(error.message);
   },
 
   // fetch-weather bot executes
-  ['fetch-weather'](sessionId, context, cb) { 
+  ['fetch-weather'](sessionId, context, cb) {
     // Here should go the api call, e.g.:
     // context.forecast = apiCall(context.loc)
-    context.forecast = 'sunny'; 
+    context.forecast = 'sunny';
     cb(context);
   },
 };
