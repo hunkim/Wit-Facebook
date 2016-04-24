@@ -70,8 +70,8 @@ I see it’s sunny in Seoul today!              # bot
 
 ![image](https://cloud.githubusercontent.com/assets/901975/14757285/78e65248-0924-11e6-9ffb-e6226a7d434f.png)
 
-### 서버를 Heruku 에서 돌리기
-heroku.com는 본인의 프로그램을 5개 까지 무료로 deploy 해주므로 이 서비스를 이용하여 우리 봇 서버를 돌립니다. 자세한 heroic 사용법은 heroku.com 참조.
+### 서버를 Heroku 에서 돌리기
+heroku.com는 본인의 프로그램을 5개 까지 무료로 deploy 해주므로 이 서비스를 이용하여 우리 봇 서버를 돌립니다. 자세한 Heroku 사용법은 heroku.com 참조.
 
 * 'heroku create' 명령을 실행한 다음 heroku로 push하여 deploy 합니다.
 
@@ -123,7 +123,7 @@ git push heroku master
 ```bash
 curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
 ```
-* You may see:
+* Success 신호를 받으면 정상입니다.
 ```bash
 {"success":true}
 ```
