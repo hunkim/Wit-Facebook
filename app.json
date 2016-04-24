@@ -1,6 +1,6 @@
 {
   "name": "Wit-Facebook-bot",
-  "description": "Wit-Facebook Messanger Bot Demo.",
+  "description": "Wit-Facebook Messenger Bot Demo.",
   "repository": "https://github.com/hunkim/Wit-Facebook",
   "logo": "https://avatars2.githubusercontent.com/u/4723433",
   "keywords": ["node", "express", "github", "wit", "bot", "fcaebook"],
@@ -14,7 +14,7 @@
       "required": true
     },
     "FB_VERIFY_TOKEN": {
-      "description": "Facebook Verfication Token. You can make it up.",
+      "description": "Facebook verification Token. You can make it up.",
       "required": false
     }
   }
