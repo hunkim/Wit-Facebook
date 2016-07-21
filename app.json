@@ -1,20 +1,20 @@
 {
   "name": "Wit-Facebook-bot",
   "description": "Wit-Facebook Messenger Bot Demo.",
-  "repository": "https://github.com/hunkim/Wit-Facebook",
-  "logo": "https://avatars2.githubusercontent.com/u/4723433",
+  "repository": "https://github.com/sureshshinde1689/Wit-Facebook.git",
+  "logo": "https://avatars0.githubusercontent.com/u/8859757?v=3&s=460",
   "keywords": ["node", "express", "github", "wit", "bot", "fcaebook"],
   "env": {
     "WIT_TOKEN": {
-      "description": "Server Access Token from wit.ai (see your wit app settings).",
+      "description": "YXJRNRKTUKG6CRDMNDDQU6UE7YYR7QMX",
       "required": true
     },
     "FB_PAGE_TOKEN": {
-      "description": "Facebook Page Token from https://developers.facebook.com/apps/",
+      "description": "EAACEZA4vVwVABAG8Qu1arvyqijRcAV0UBEwCt5zOkoBAjF3hZC2XLk6pkJqsnTW1ZBtwtK5ZAESEZCyS54lrQeD5eFlfGoyg5v3gGn0E1b5tOR0f6pv8bLkDBWsAWKBsQZCoxJuL4fh9Vl7r2eIZAzv5oXU7CZAdbdT32r3pu6KupgZDZD",
       "required": true
     },
     "FB_VERIFY_TOKEN": {
-      "description": "Facebook verification Token. You can make it up.",
+      "description": "itschamp",
       "required": false
     }
   }
