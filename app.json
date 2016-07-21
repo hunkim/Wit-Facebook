@@ -10,11 +10,11 @@
       "required": true
     },
     "FB_PAGE_TOKEN": {
-      "description": "EAAF8x0rIGUwBACnKhEe0ybh6OpPoVUFhOZBBUsz2HVdmwYrUG99XNwXuRrHL6qDUAdDhBnVCS0rQaKQEV4GX5D4PH8Gf9MqCfRGxq0BonMp7mmZBfefYtH4qZBjmyZBHKj7efFIh5GjpE0qit2CNLkoSesiRfoHkhz2MWEo0PgZDZD",
+      "description": "EAACEZA4vVwVABAB3OzHSooBxyJ9j5MPWgiDo9hjXWJTPQkp1YVA6ptMWHVRoZAiGCrW1Sv4j45NOEieIVonGXLyapZAidxF20heCp7gwPscClWqEJcOmX2GP95oZCbZBEzgeKPxBHQ6TPct7VrEmCjLyqsxLZB7KSbOgW5IHQGJAZDZD",
       "required": true
     },
     "FB_VERIFY_TOKEN": {
-      "description": "perfect10_moments",
+      "description": "itschamp",
       "required": false
     }
   }
